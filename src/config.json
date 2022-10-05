@@ -1,23 +1,23 @@
 {
-  "secretKey": "THISISMYSECURETOKEN",
+  "secretKey": "ILIASMY",
   "host": "http://localhost",
-  "port": "21465",
-  "deviceName": "WppConnect",
-  "poweredBy": "WPPConnect-Server",
+  "port": "21466",
+  "deviceName": "WABLASTER",
+  "poweredBy": "WABLASTER",
   "startAllSession": true,
-  "tokenStoreType": "file",
+  "tokenStoreType": "mysql",
   "maxListeners": 15,
   "customUserDataDir": "./userDataDir/",
   "webhook": {
-    "url": null,
-    "autoDownload": true,
+    "url": "http://localhost/autobots-blaster/wablias/webhook",
+    "autoDownload": false,
     "uploadS3": false,
-    "readMessage": true,
+    "readMessage": false,
     "allUnreadOnStart": false,
     "listenAcks": true,
-    "onPresenceChanged": true,
-    "onParticipantsChanged": true,
-    "onReactionMessage": true
+    "onPresenceChanged": false,
+    "onParticipantsChanged": false,
+    "onReactionMessage": false
   },
   "archive": {
     "enable": false,
@@ -70,6 +70,13 @@
     "redisPort": 6379,
     "redisPassword": "",
     "redisDb": 0,
-    "redisPrefix": "docker"
+    "redisPrefix": "docker",
+    "mysql" : {
+      "username": "root",
+      "password": "",
+      "database": "ablaster",
+      "host": "localhost",
+      "dialect": "mysql"
+    }
   }
 }
